@@ -5,7 +5,7 @@
  * 
  * Author: Dylan Corry
  * Date: 02/01/2021 
- * Description: This is a simple  console unit converted program that can convert two numerical values into desired units, using C#.
+ * Description: This is a simple  console unit converted program that can convert two numerical values from metric units into imperial units, using C#.
  * 
  * Copyright notice
  */
@@ -23,12 +23,11 @@ namespace UnitConverter
         static void Main(string[] args)
         {
             // enter cm
+            Console.WriteLine("Enter units in CM : ");
+            double cmToInch = Convert.ToDouble(Console.ReadLine());
+            double convertToInch = (cmToInch * 2.5);
+            Console.WriteLine("Conversion Result = " + convertToInch + " " + "Inches");
             
-            int a = 42;
-            int b = 119;
-            int c = a + b;
-            Console.WriteLine(c);
-            //Console.ReadKey();
         }
     }
 }
