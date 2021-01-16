@@ -43,7 +43,7 @@ namespace LearningCSharp
 
             Units unit = new Units();
             unit.convertMetricToImperial(ui.userFromChoice, ui.userToChoice, ui.userFromValue);
-            unit.PrintResult();
+            unit.PrintResult(ui.userToChoice);
 
         } // end of main()
     }

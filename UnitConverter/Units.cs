@@ -114,9 +114,41 @@ namespace LearningCSharp
             }
         } // end of method
 
-        public void PrintResult()
-        {
-            Console.WriteLine(Result.ToString("N2"));
-        }
-    }
-}
+        public void PrintResult(string userToChoice)
+        { // method start 
+            switch (userToChoice)
+            { // switch statement start
+                case "i":
+                    Console.WriteLine(Result.ToString("N2") + " inches");
+                    break;
+                case "ft":
+                    Console.WriteLine(Result.ToString("N2") + " feet");
+                    break;
+                case "y":
+                    Console.WriteLine(Result.ToString("N2") + " yards");
+                    break;
+                case "lbs":
+                    Console.WriteLine(Result.ToString("N2") + " pounds");
+                    break;
+                case "f":
+                    Console.WriteLine(Result.ToString("N2") + " fahrenheit");
+                    break;
+                case "oz":
+                    Console.WriteLine(Result.ToString("N2") + " ounces");
+                    break;
+                case "pts":
+                    Console.WriteLine(Result.ToString("N2") + " pints");
+                    break;
+                case "gal":
+                    Console.WriteLine(Result.ToString("N2") + " gallons");
+                    break;
+                case "mile":
+                    Console.WriteLine(Result.ToString("N2") + " miles");
+                    break;
+                default:
+                    Console.WriteLine("Error : Correct units not dectected.");
+                    break;
+            } // switch statemnt end
+        } // method end
+    } // class end
+} // namespace end
