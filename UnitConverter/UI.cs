@@ -24,6 +24,22 @@ namespace LearningCSharp
         private string fromChoice;
         private double fromValue = 00.00;
         private string toChoice;
+        private string userWantToQuit;
+
+
+        public string getUserWantToQuit
+        {
+            get { return userWantToQuit; }
+            set { userWantToQuit = value; }
+        }
+
+        public void ShouldConsoleExit()
+        {
+            Console.WriteLine("Do you want to quit? \t If yes, type ( y )");
+            getUserWantToQuit = Console.ReadLine();
+        }
+
+
         public void Greeting()
         {
             // from

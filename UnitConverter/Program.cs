@@ -35,16 +35,38 @@ namespace LearningCSharp
              * 
              * Result is printed
              * 
+             * Check if user wants to quit
+             * 
              * End
              */
 
-            UI ui = new UI();
-            ui.Greeting();
+            UI ui = new UI(); // instantiate UI
+            Units unit = new Units(); // instantiate Units
 
-            Units unit = new Units();
-            unit.convertMetricToImperial(ui.userFromChoice, ui.userToChoice, ui.userFromValue);
-            unit.PrintResult(ui.userToChoice);
+            // while loop for flow
+            var y = "y";
+            while (ui.getUserWantToQuit != y)
+            {
+                ui.Greeting();
+                unit.convertMetricToImperial(ui.userFromChoice, ui.userToChoice, ui.userFromValue);
+                unit.PrintResult(ui.userToChoice);
+                // function to check if user wants to exit
+                ui.ShouldConsoleExit();
+            }
+
+
+           
 
         } // end of main()
     }
 }
+/*
+ * while (ui.getUserWantToQuit !== " y ")
+ * {
+ *          ui.Greeting();
+            unit.convertMetricToImperial(ui.userFromChoice, ui.userToChoice, ui.userFromValue);
+            unit.PrintResult(ui.userToChoice);
+            // function to check if user wants to exit
+            ui.ShouldConsoleExit();
+ * }
+ */
